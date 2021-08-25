@@ -1,5 +1,5 @@
 #!/bin/bash
-JENKINSDOCKER=./Dockerfile 
+
 # this script is only tested on ubuntu xenial
 
 # install docker
@@ -13,7 +13,7 @@ apt-get install docker-ce docker-ce-cli containerd.io
 systemctl enable docker
 systemctl start docker
 usermod -aG docker ubuntu
-
+DockerFile=./Dockerfile 
 # Buld   jenkins Image
 mkdir -p /var/jenkins_home
 chown -R 1000:1000 /var/jenkins_home/
